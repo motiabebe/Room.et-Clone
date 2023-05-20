@@ -2,17 +2,224 @@
     --color-theme : rgb(239, 45, 53);
     font-family: Lato, sans-serif;
 }
-/* Best Deals Section  */
-section {
-    margin: 0% 5% 0% 5%;
+/* Header Section */
+header  {
+    width: 100%;
+    transition: 300ms ease-in-out;
 }
-section > :nth-child(1) {
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+nav > :nth-child(1) > h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0px 0px 0px 10px;;
+}
+nav > :nth-child(1) > input {
+    font-size: 15px;
+    font-weight: 500;
+    padding-left: 15px;
+    padding-right: 30px;
+    border-radius: 4px;
+    color: rgb(44, 44, 44);
+    border: 1px solid rgb(235, 235, 235);
+    background-color: rgb(247, 247, 247);
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 10%;
+    width: 400px;
+}
+nav > :nth-child(2) > ul > li {
+    list-style: none;
+    margin-top: 1%; 
+}
+nav > :nth-child(2) > :nth-child(2) {
+    margin-left: 74px;
+}
+nav > :nth-child(2) > ul > li > a {
+    margin-left: 50px;
+}
+nav > :nth-child(2) > ul > li > a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--color-theme);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+    transition: 300ms ease-in-out;
+}
+nav > :nth-child(2) button {
+    background-color: var(--color-theme);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    line-height: 18px;
+    padding: 10px 20px 10px 20px;
+    margin-left: 25px;
+}
+/* Main Section */ 
+#home {
+    background-image: url("../img/10.jpg");
+    width: 100%;
+    height: 90vh;
+    display: grid;
+    place-content: center;
+}
+#home > input {
+    border: 0px;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 0px;
+    height: 60px;
+    padding: 0px 30px 0px 40px;
+    background: transparent;
+    color: rgb(44, 44, 44);
+}
+/* Explore Des */
+#explore-des {
+    padding: 10px 0px 66px 0px;
+    margin: 0% 0% 0% 2%;
+}
+#explore-des > :nth-child(1) {
     font-size: 25px;
     line-height: 30px;
     font-weight: 700;
     margin: 20px 0 20px 0;
 }
-section > :nth-child(2) > .room {
+.destination {
+    border: 1px solid #a6a6a6;
+    border-radius: 5px;
+    display: grid;
+    place-content: center;
+    height: 310px;
+    width: 250px;
+    background-position: center;
+    background-size: cover;
+}
+.destination > h2 {
+    /* overlay text on div and center it*/
+    color: white;
+    /* blend mode background is black */
+    mix-blend-mode:lighten;
+}
+.overlay {
+    background-color: black;
+    opacity: 0.4;
+    height: 310px;
+    width: 250px;
+    position: absolute;
+}
+/* Explore Section */
+#explore {
+    padding: 10px 0px 66px 0px;
+    margin: 0% 0% 0% 2%;
+}
+#explore-rooms {
+    margin-top: 2%;
+}
+#explore > .buttons > button {
+    height: 38px;
+    font-size: 15px;
+    border-radius: 3px;
+    color: rgb(44, 44, 44);
+    border: 1px solid white;
+    padding: 0px 20px 0px 20px;
+}
+/* Sign In  */
+#sign {
+    display: grid;
+    grid-template-columns: 43% 57%;
+}
+.sign {
+    padding: 130px;
+}
+.sign > :nth-child(1) {
+    font-size: 18px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: var(--color-theme);
+}
+.sign > :nth-child(2) {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.sign > :nth-child(3) {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+.sign > :nth-child(4) {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.sign > form > .phone {
+    font-size: 14px;
+    letter-spacing: 0.01rem;
+    margin-left: 0px;
+    border: 1px solid #909090;
+    border-radius: 5px;
+    line-height: 25px;
+    height: 35px;
+    width: 390px;
+    height: 45px;
+}
+.sign > form > :nth-child(5) {
+    margin-top: 30px;
+}
+.sign > form > button {
+    margin-top: 10%;
+    background-color: var(--color-theme);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    line-height: 18px;
+    padding: 10px 20px 10px 20px;
+    width: 100%;
+    height: 57px;
+    font-size: 17px;
+}
+.sign > :nth-child(5) {
+    margin-top: 10%;
+}
+.sign > :nth-child(6) {
+    margin-top: 10%;
+}
+.sign > :nth-child(6) > a {
+    color: var(--color-theme);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.sign-img {
+    position: sticky;
+    top: 0px;
+    height: 100vh;
+    background-image: url("../img/loginIntro.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sign-img > img {
+    object-fit: cover;
+}
+/* Sign Up Section */
+
+/* Best Deals Section  */
+#best-deals {
+    margin: 0% 5% 0% 5%;
+}
+#best-deals > :nth-child(1) {
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    margin: 20px 0 20px 0;
+}
+#best-deals > :nth-child(2) > .room {
     border: 1px solid #e6e6e6;
     /* border-width: 0px 1px 1px; */
     border-radius: 6px;

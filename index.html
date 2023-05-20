@@ -6,133 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Room.et</title>
-    <link rel="stylesheet" href="https://motiabebe.github.io/pilot_css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- <div class="main">
-        <div class="navbar flex">
+    <header id="navbar">
+
+    </header>
+
+    <main id="home">
+        <input type="text" placeholder="Search for a city or particular hotel">
+      </main>
+
+    <section id="explore-des">
+        <p>Explore Destinations</p>
+        <div class="grid row-2 col-5" id="destinations">
+            <!-- Destinations are printed here -->
 
         </div>
-    </div>
+    </section>
 
-    <main>
-        <h2>Welcome to room.et!</h2>
-        <p>This is a website where you can find information about rooms in Ethiopia.</p>
-        <p>You can search for rooms by location, price, and other criteria.</p>
-        <p>Once you've found a room that you're interested in, you can contact the owner to book it.</p>
-        <p>We hope you enjoy using room.et!</p>
-      </main> -->
-
-      <section>
+    <section id="best-deals">
         <p>Best Deals</p>
         <div class="grid row-2 col-5" id="rooms">
-            <!-- <div class="room">
-                <div class="room-img">
-                    <img src="https://roomet.fra1.digitaloceanspaces.com/4aaf060627a4d9bf8dcdd034a662d891" width="250" height="170">
-                </div>
-                <div class="room-data">
-                    <p>📍ፊጋ አካባቢ ፣ አዲስ አበባ</p>
-                    <p><b>Lake View Room</b></p>
-                    <p>2060 ETB/Night</p>
-                        <div class="rating">
-                            <span>⭐</span>
-                            <span>⭐</span>
-                            <span>⭐</span>
-                            <span>⭐</span>
-                            <span>⭐</span>
-                        </div>
-                </div>
-            </div>
+            <!-- Rooms are printed here -->
 
-            <div class="room">
-                <div class="room-img">
-                    <img src="img/10.jpg" width="250" height="170">
-                </div>
-                <div class="room-data">
-                    <p>📍ፊጋ አካባቢ ፣ አዲስ አበባ</p>
-                    <p><b>Lake View Room</b></p>
-                    <p>2060 ETB/Night</p>
-                        <div class="rating">
-                            <span>⭐</span>
-                            <span>⭐</span>
-                            <span>⭐</span>
-                            <span>⭐</span>
-                            <span>⭐</span>
-                        </div>
-                </div>
-            </div>
-            <div class="room">
-                <div class="room-img">
-                    <img src="https://roomet.fra1.digitaloceanspaces.com/4aaf060627a4d9bf8dcdd034a662d891" width="250" height="170">
-                </div>
-                <div class="room-data">
-                    <p>📍ፊጋ አካባቢ ፣ አዲስ አበባ</p>
-                    <p><b>Lake View Room</b></p>
-                    <p>2060 ETB/Night</p>
-                        <div class="rating">
-                            <span>⭐</span>
-                            <span>⭐</span>
-                            <span>⭐</span>
-                            <span>⭐</span>
-                            <span>⭐</span>
-                        </div>
-                </div>
-            </div>
-
-            <div class="room">
-                <div class="room-img">
-                    <img src="img/10.jpg" width="250" height="170">
-                </div>
-                <div class="room-data">
-                    <p>📍ፊጋ አካባቢ ፣ አዲስ አበባ</p>
-                    <p><b>Lake View Room</b></p>
-                    <p>2060 ETB/Night</p>
-                        <div class="rating">
-                            <span>⭐</span>
-                            <span>⭐</span>
-                            <span>⭐</span>
-                            <span>⭐</span>
-                            <span>⭐</span>
-                        </div>
-                </div>
-            </div>
-            <div class="room">
-                <div class="room-img">
-                    <img src="https://roomet.fra1.digitaloceanspaces.com/4aaf060627a4d9bf8dcdd034a662d891" width="250" height="170">
-                </div>
-                <div class="room-data">
-                    <p>📍ፊጋ አካባቢ ፣ አዲስ አበባ</p>
-                    <p><b>Lake View Room</b></p>
-                    <p>2060 ETB/Night</p>
-                        <div class="rating">
-                            <span>⭐</span>
-                            <span>⭐</span>
-                            <span>⭐</span>
-                            <span>⭐</span>
-                            <span>⭐</span>
-                        </div>
-                </div>
-            </div>
-
-            <div class="room">
-                <div class="room-img">
-                    <img src="img/10.jpg" width="250" height="170">
-                </div>
-                <div class="room-data">
-                    <p>📍ፊጋ አካባቢ ፣ አዲስ አበባ</p>
-                    <p><b>Lake View Room</b></p>
-                    <p>2060 ETB/Night</p>
-                        <div class="rating">
-                            <span>⭐</span>
-                            <span>⭐</span>
-                            <span>⭐</span>
-                            <span>⭐</span>
-                            <span>⭐</span>
-                        </div>
-                </div>
-            </div>
- -->
         </div>
     </section>
 
@@ -147,6 +45,57 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // get the div with id of destinations
+        const destinationsDiv = document.getElementById("destinations");
+
+        // print the destinations
+        destinations.forEach((destination) => {
+        destinationsDiv.innerHTML += `
+            <div class="destination" style="background-image: url(${destination.image})">
+                <div class="overlay"></div>
+                <h2>${destination.name}</h2>
+            </div>`
+        })
+
+        // get the div with id of rooms
+        const roomsDiv = document.getElementById("rooms");
+
+        // print the rooms
+        rooms.forEach((room) => {
+        roomsDiv.innerHTML += `
+        <div class="room">
+            <div class="room-img">
+                <img src="${room.image}" width="250" height="170" class="img-fit">
+            </div>
+            <div class="room-data">
+                <p>📍${room.location}</p>
+                <p><b>${room.name}</b></p>
+                <p>${room.price} ETB/Night</p>
+                    <div class="rating">
+                        <span>${"★".repeat(room.rating)}</span>
+                        <span>(${room.rating})</span>
+                        </div>
+            </div>
+        </div>`
+
+        // append the room to the rooms div
+        // roomsDiv.appendChild(roomsDiv);
+        })
+
+// scroll change navbar color
+window.addEventListener("scroll", () => {
+        if (window.scrollY > 600) {
+            navbar.style.backgroundColor = "white";
+            navbar.style.color = "red";
+        }
+        else {
+            navbar.style.backgroundColor = "transparent";
+            navbar.style.color = "white";
+            navbar.style.position = "fixed";
+        }
+    })
+    </script>
     
 </body>
 </html>

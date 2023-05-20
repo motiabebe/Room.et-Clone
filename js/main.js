@@ -56,31 +56,81 @@ const rooms = [
         price: 100,
         rating: 4.5,
     },
+    {
+        name: "Kefetew Guest House",
+        image: "https://roomet.fra1.digitaloceanspaces.com/4aaf060627a4d9bf8dcdd034a662d891",
+        location: "Addis Ababa",
+        price: 100,
+        rating: 4,
+    },
+    {
+        name: "Darrik Guest House",
+        image: "https://roomet.fra1.digitaloceanspaces.com/4fcdaeab1fcfa83c8dcd64fa43c6e796",
+        location: "Addis Ababa",
+        price: 150,
+        rating: 3,
+    },
 ]
 
-// get the div with id of rooms
-const roomsDiv = document.getElementById("rooms");
+const destinations = [
+    {
+        name: "Addis Ababa",
+        // get image from of the city from unsplash
+        image: "https://roomet.fra1.digitaloceanspaces.com/f4329f7b04336b9bfebfa4f4863672d2",
 
-// print the rooms
-rooms.forEach((room) => {
-    roomsDiv.innerHTML += `
-    <div class="room">
-        <div class="room-img">
-            <img src="${room.image}" width="250" height="170" class="img-fit">
+    },
+    {
+        name: "Jimma",
+        // get image from of the city from unsplash
+        image: "https://roomet.fra1.digitaloceanspaces.com/0c443e4943c84a3c79f19f57ea413da4",
+    },
+    {
+        name: "BahirDar",
+        // get image from of the city from unsplash
+        image: "https://roomet.fra1.digitaloceanspaces.com/e3b7db8fa33f6ae28ef1bbb53cb15a39",
+    },
+    {
+        name: "Arba Minch",
+        // get image from of the city from unsplash
+        image: "https://roomet.fra1.digitaloceanspaces.com/1aac3a734bd00d00bfb9da7fba90aa0f",
+    },
+    {
+        name: "Assela",
+        // get image from of the city from unsplash
+        image: "https://api.room.et/image/webp/90e4ee80143815324fd8bb28ee06a807",
+    }]
+
+
+// navabar
+const navbar = document.getElementById("navbar");
+
+navbar.innerHTML = `
+    <nav class="">
+        <div class="flex">
+            <h3><a href="index.html">Room.et</a></h3> 
+            <input type="text" name="" id="" placeholder="Search for a city or particular hotel">
         </div>
-        <div class="room-data">
-            <p>📍${room.location}</p>
-            <p><b>${room.name}</b></p>
-            <p>${room.price} ETB/Night</p>
-                <div class="rating">
-                    <span>${"★".repeat(room.rating)}</span>
-                    <span>(${room.rating})</span>
-                    </div>
+        <div class="flex">
+            <ul class="flex flex-space-even">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+            </ul>
+            <ul class="flex">
+                <li><a href="signin.html">Sign in</a></li>
+                <button class=""><a href="signup.html">Sign up</a></button>
+            </ul>
         </div>
-    </div>`
+    </nav>`
+// end of navabar
 
-    // append the room to the rooms div
-    // roomsDiv.appendChild(roomsDiv);
 
-}   )
+    
+
+
+
+
+
+
+
+
 

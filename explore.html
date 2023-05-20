@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/img/favicon.png" type="image/png" sizes="16x16">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room.et</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="navbar">
+
+    </header>
+
+    <main id="explore">
+        <div class="buttons">
+                <button><a href="">Amenities</a></button>
+                <button><a href="">Property Type</a></button>
+                <button><a href="">Price per night</a></button>
+                <button><a href="">Reset</a></button>
+                <!-- <input type="checkbox" name="" id="">
+                <label for="">Show Map</label> -->
+        </div>
+        <div class="grid row-2 col-5" id="explore-rooms">
+            <!-- Rooms are printed here -->
+  
+        </div>
+      </main>
+
+    <footer class="flex flex-center flex-row">
+        <h3>Room.et</h3>
+        <ul class="flex">
+            <li>Home</li>
+            <li>Explore</li>
+        </ul>
+        <p>Contact us on <span>9883</span></p> 
+        <p>Copyright &copy; 2023 Room.et</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        const exploreRooms = document.getElementById("explore-rooms");
+
+// print 8 rooms with a button to print more
+
+// print the rooms
+rooms.forEach((room) => {
+    exploreRooms.innerHTML += `
+    <div class="room">
+        <div class="room-img">
+            <img src="${room.image}" width="250" height="170" class="img-fit">
+        </div>
+        <div class="room-data">
+            <p>📍${room.location}</p>
+            <p><b>${room.name}</b></p>
+            <p>${room.price} ETB/Night</p>
+                <div class="rating">
+                    <span>${"★".repeat(room.rating)}</span>
+                    <span>(${room.rating})</span>
+                    </div>
+        </div>
+    </div>`
+
+    // append the room to the rooms div
+    // roomsDiv.appendChild(roomsDiv);
+})
+
+    </script>
+    
+</body>
+</html>
