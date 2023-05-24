@@ -105,7 +105,7 @@ const destinations = [
 const navbar = document.getElementById("navbar");
 
 navbar.innerHTML = `
-    <nav class="">
+    <nav class="flex flex-space-even">
         <div class="flex">
             <h3><a href="index.html">Room.et</a></h3> 
             <input type="text" name="" id="" placeholder="Search for a city or particular hotel">

@@ -40,6 +40,7 @@ a, a:link, a:visited, a:active {
 }
 .grid-center {
     justify-content: center;
+    place-content: center;
 }
 .col-2 {
     grid-template-columns: repeat(2,1fr);

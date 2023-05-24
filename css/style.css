@@ -8,9 +8,6 @@ header  {
     transition: 300ms ease-in-out;
 }
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 0 25px;
 }
 nav > :nth-child(1) > h3 {
@@ -28,8 +25,6 @@ nav > :nth-child(1) > input {
     border: 1px solid rgb(235, 235, 235);
     background-color: rgb(247, 247, 247);
     height: 50px;
-    overflow: hidden;
-    text-overflow: ellipsis;
     margin-left: 10%;
     width: 400px;
 }
@@ -62,14 +57,11 @@ nav > :nth-child(2) button {
 /* Main Section */ 
 #home {
     background-image: url("../img/10.jpg");
-    width: 100%;
+    background-size: cover;
     height: 90vh;
-    display: grid;
-    place-content: center;
 }
 .searchbox {
     border-radius: 6px;
-    /* background: transparent; */
     background-color: rgba(255, 255, 255, 0.82);;
     margin: 15rem 40rem 0px 0rem;
     width: 100%;
@@ -83,7 +75,6 @@ nav > :nth-child(2) button {
 }
 .searchbox > :nth-child(3) {
     margin-top: 2rem;
-    /* padding 1rem on left and right */
     padding: 0rem 1rem 0rem 1rem;
 }
 #home .searchbox > div > input {
@@ -92,7 +83,6 @@ nav > :nth-child(2) button {
     font-weight: 400;
     border-radius: 0px;
     height: 60px;
-    /* padding: 0px 30px 0px 40px; */
     width: 100%;
     background: #f7f7f7;
     color: rgb(44, 44, 44);
@@ -126,8 +116,6 @@ nav > :nth-child(2) button {
 .destination {
     border: 1px solid #a6a6a6;
     border-radius: 5px;
-    display: grid;
-    place-content: center;
     height: 310px;
     width: 250px;
     background-position: center;
@@ -139,7 +127,6 @@ nav > :nth-child(2) button {
     color: white;
     mix-blend-mode:lighten;
 }
-
 /* Explore Section */
 #explore {
     padding: 0x 0px 66px 0px;
@@ -158,7 +145,6 @@ nav > :nth-child(2) button {
 }
 /* Sign In  */
 #sign {
-    display: grid;
     grid-template-columns: 43% 57%;
 }
 .sign {
@@ -223,7 +209,6 @@ nav > :nth-child(2) button {
     font-size: 15px;
     font-weight: 600;
 }
-
 .sign-img {
     position: sticky;
     top: 0px;
@@ -233,11 +218,6 @@ nav > :nth-child(2) button {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.sign-img > img {
-    object-fit: cover;
-}
-/* Sign Up Section */
-
 /* Best Deals Section  */
 #best-deals {
     margin: 0% 5% 0% 5%;
@@ -250,7 +230,6 @@ nav > :nth-child(2) button {
 }
 #best-deals > :nth-child(2) > .room {
     border: 1px solid #e6e6e6;
-    /* border-width: 0px 1px 1px; */
     border-radius: 6px;
     width: fit-content;
     margin-bottom: 30px;
