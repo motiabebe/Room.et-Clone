@@ -14,15 +14,23 @@
 
     </header>
 
-    <main id="home">
-        <input type="text" placeholder="Search for a city or particular hotel">
+    <main id="home" class="grid grid-center">
+        <div class="searchbox">
+            <h2>Latest reviews. Lowest prices.</h2>
+            <p>let us help you find the right hotel for you.</p>
+            <div class="flex">
+                <input type="text" placeholder="Search for a city or particular hotel">
+                <button>Search</button>
+            </div>
+        </div>
       </main>
 
     <section id="explore-des">
         <p>Explore Destinations</p>
-        <div class="grid row-2 col-5" id="destinations">
+        <div class="grid row-1 col-5" id="destinations">
             <!-- Destinations are printed here -->
 
+            
         </div>
     </section>
 
@@ -53,7 +61,7 @@
         destinations.forEach((destination) => {
         destinationsDiv.innerHTML += `
             <div class="destination" style="background-image: url(${destination.image})">
-                <div class="overlay"></div>
+
                 <h2>${destination.name}</h2>
             </div>`
         })

@@ -67,15 +67,50 @@ nav > :nth-child(2) button {
     display: grid;
     place-content: center;
 }
-#home > input {
+.searchbox {
+    border-radius: 6px;
+    /* background: transparent; */
+    background-color: rgba(255, 255, 255, 0.82);;
+    margin: 15rem 40rem 0px 0rem;
+    width: 100%;
+}
+.searchbox > :nth-child(1) {
+    margin-top: 2rem;
+    padding-left: 1rem;
+}
+.searchbox > :nth-child(2) {
+    padding-left: 1rem;
+}
+.searchbox > :nth-child(3) {
+    margin-top: 2rem;
+    /* padding 1rem on left and right */
+    padding: 0rem 1rem 0rem 1rem;
+}
+#home .searchbox > div > input {
     border: 0px;
     font-size: 15px;
     font-weight: 400;
     border-radius: 0px;
     height: 60px;
-    padding: 0px 30px 0px 40px;
-    background: transparent;
+    /* padding: 0px 30px 0px 40px; */
+    width: 100%;
+    background: #f7f7f7;
     color: rgb(44, 44, 44);
+}
+#home .searchbox > div > input::placeholder {
+    color: rgb(44, 44, 44);
+}
+#home .searchbox > div  > input:focus {
+    outline: none;
+}
+#home .searchbox > div > button {
+    background-color: var(--color-theme);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    line-height: 18px;
+    padding: 10px 20px 10px 20px;
+    margin-left: 25px;
 }
 /* Explore Des */
 #explore-des {
@@ -97,24 +132,18 @@ nav > :nth-child(2) button {
     width: 250px;
     background-position: center;
     background-size: cover;
+    background-color: #484747;
+    background-blend-mode: overlay;
 }
 .destination > h2 {
-    /* overlay text on div and center it*/
     color: white;
-    /* blend mode background is black */
     mix-blend-mode:lighten;
 }
-.overlay {
-    background-color: black;
-    opacity: 0.4;
-    height: 310px;
-    width: 250px;
-    position: absolute;
-}
+
 /* Explore Section */
 #explore {
-    padding: 10px 0px 66px 0px;
-    margin: 0% 0% 0% 2%;
+    padding: 0x 0px 66px 0px;
+    margin: 0% 0% 3% 2%;
 }
 #explore-rooms {
     margin-top: 2%;
